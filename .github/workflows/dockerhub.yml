@@ -41,8 +41,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/seeq-shop-frontend:latest
-            ${{ secrets.DOCKER_USERNAME }}/seeq-shop-frontend:${{ github.sha }}
+            ${{ secrets.DOCKER_USERNAME }}/seeq-admin-frontend:latest
+            ${{ secrets.DOCKER_USERNAME }}/seeq-admin-frontend:${{ github.sha }}
           cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/seeq-admin-frontend:buildcache
           cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/seeq-admin-frontend:buildcache,mode=max
 
